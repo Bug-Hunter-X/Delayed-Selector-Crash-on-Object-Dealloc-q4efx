@@ -1,0 +1,1 @@
+In Objective-C, a subtle bug can occur when using `performSelector:withObject:afterDelay:` with selectors that take arguments. If the object you're sending the message to is deallocated before the delay expires, a crash will occur.  This is because the selector will still be executed, but the object will no longer exist.
